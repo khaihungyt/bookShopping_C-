@@ -1,0 +1,48 @@
+﻿<Window x:Class="PRN212_Assignment.ShoppingCart"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PRN212_Assignment"
+        mc:Ignorable="d"
+        Title="ShoppingCart" Height="550" Width="800">
+    <Grid>
+        <TextBlock VerticalAlignment="Top" Height="44" Margin="0,0,587,0" FontSize="25">
+        <Run Text="Book" FontWeight="Bold"/>
+        <Run Text="Shopping" FontWeight="Bold" Foreground="Red"/>
+        </TextBlock>
+        <WrapPanel Orientation="Horizontal" Margin="0,12,0,422" HorizontalAlignment="Right" Width="534">
+            <Button x:Name="btnHomePage" Content="Home Page" Width="112" Height="30" Click="btnHomePage_Click"/>
+            <Button x:Name="btnCart" Content="Cart" Margin="12" Width="100" Height="30"/>
+            <Button x:Name="btnUserProfile" Margin="12" Width="100" Height="30" Click="btnUserProfile_Click"/>
+            <Button x:Name="btnLogout"  Content="Log Out" Margin="12" Width="100" Height="30" Click="btnLogout_Click"/>
+        </WrapPanel>
+        <ListView x:Name="lvCartList" Margin="0,117,160,242">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Image" Width="100">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Image Source="{Binding Path=BookImg}" Width="100" Height="100" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Name Book" Width="200" DisplayMemberBinding="{Binding Path=BookName}"/>
+                    <GridViewColumn Header="Quantity" Width="100"  DisplayMemberBinding="{Binding Path=Quantity}"/>
+                    <GridViewColumn Header="Price a Book" Width="100" DisplayMemberBinding="{Binding Path=BookPrice}"/>
+                    <GridViewColumn Header="Actions" Width="100">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button x:Name="btnRemove" Content="Remove" Click="Remove_Click" DataContext="{Binding Path=CartId}"></Button>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <StackPanel Margin="474,297,104,154">
+            <Label Name="lblTotalPrice"  Content="Total: " FontWeight="Bold"></Label>
+            <Button Name="btnCheckOut" Content="Check Out" Height="28" Width="115" Click="btnCheckOut_Click" ></Button>
+        </StackPanel>
+    </Grid>
+</Window>

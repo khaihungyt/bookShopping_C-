@@ -1,0 +1,45 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PRN212_Assignment"
+        xmlns:Wpf="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf" x:Class="PRN212_Assignment.HomePage"
+        mc:Ignorable="d"
+        Title="HomePage" Height="550" Width="800">
+    <Grid>
+        <TextBlock VerticalAlignment="Top" Height="44" Margin="0,0,587,0" FontSize="25">
+        <Run Text="Book" FontWeight="Bold"/>
+        <Run Text="Shopping" FontWeight="Bold" Foreground="Red"/>
+        </TextBlock>
+        <WrapPanel Orientation="Horizontal" Margin="0,12,10,362" HorizontalAlignment="Right" Width="524">
+            <Button x:Name="btnHomePage" Content="Home Page" Width="108" Height="30" />
+            <Button x:Name="btnCart" Content="Cart" Margin="12" Width="100" Height="30" Click="btnCart_Click"/>
+            <Button x:Name="btnLogIn"  Content="Login" Margin="12" Width="100" Height="30" Click="btnLogIn_Click"/>
+            <Button x:Name="btnSignUp"  Content="Sign Up" Margin="12" Width="100" Height="30" Click="btnSignUp_Click"/>
+        </WrapPanel>
+        <ListView x:Name="lvBookList" Margin="10,215,56,71" SelectionChanged="lvBookList_SelectionChanged" >
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Image" Width="100">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Image Source="{Binding Path=BookImage}" Width="100" Height="100" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Book Name" Width="Auto" DisplayMemberBinding="{Binding BookName}" />
+                    <GridViewColumn Header="Author Name " Width="Auto" DisplayMemberBinding="{Binding AuthorName}"  />
+                    <GridViewColumn Header="Genre" Width="Auto" DisplayMemberBinding="{Binding GenreName}"/>
+                    <GridViewColumn Header="Number" Width="Auto" DisplayMemberBinding="{Binding Quantity}"/>
+                    <GridViewColumn Header="Price" Width="Auto" DisplayMemberBinding="{Binding Price}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <WrapPanel Margin="10,71,566,405">
+            <TextBox x:Name="txtSearch" HorizontalAlignment="Center" Height="33" Width="128"/>
+            <Button x:Name="btnSearch"  Content="Search" Width="82" Click="btnSearch_Click"/>
+        </WrapPanel>
+
+    </Grid>
+</Window>

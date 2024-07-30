@@ -1,0 +1,70 @@
+﻿<Window x:Class="PRN212_Assignment.DashboardManage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PRN212_Assignment"
+        mc:Ignorable="d"
+        Title="DashboardManage" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Sidebar -->
+        <StackPanel Background="#F0F0F0" Width="200" VerticalAlignment="Stretch" Margin="0,0,10,0">
+            <TextBlock Text="Book Shopping" FontSize="24" FontWeight="Bold" Margin="10,0,0,10" TextAlignment="Center"/>
+            <StackPanel>
+                <Button Content="Dash Board" Margin="10,20,10,20" Click="DashBoardButton_Click"/>
+                <Button Content="User Dashboard" Margin="10,20,10,20" Click="UserListButton_Click"/>
+                <Button Content="Book List" Margin="10,20,10,20" Click="BookListButton_Click"/>
+                <Button Content="Logout" Margin="10,20,10,20" Background="#428bca" Foreground="White" Click="LogOut_Click"/>
+            </StackPanel>
+        </StackPanel>
+
+        <!-- Main Content -->
+        <StackPanel Grid.Column="1" Margin="10">
+            <TextBlock Text="Dashboard" FontSize="24" FontWeight="Bold" Margin="10" TextAlignment="Center"/>
+            <Grid Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- First Row with three columns -->
+                <Border BorderBrush="Black" BorderThickness="1" CornerRadius="5" Margin="10" Grid.Row="0" Grid.Column="0">
+                    <StackPanel Margin="10">
+                        <TextBlock Text="Total User" FontSize="18" FontWeight="Bold" TextAlignment="Center"/>
+                        <TextBlock x:Name="TotalUsersTextBlock" FontSize="16" TextAlignment="Center"/>
+                    </StackPanel>
+                </Border>
+                <Border BorderBrush="Black" BorderThickness="1" CornerRadius="5" Margin="10" Grid.Row="0" Grid.Column="1">
+                    <StackPanel Margin="10">
+                        <TextBlock Text="Total Books" FontSize="18" FontWeight="Bold" TextAlignment="Center"/>
+                        <TextBlock x:Name="TotalBooksTextBlock" FontSize="16" TextAlignment="Center"/>
+                    </StackPanel>
+                </Border>
+                <Border BorderBrush="Black" BorderThickness="1" CornerRadius="5" Margin="10" Grid.Row="0" Grid.Column="2">
+                    <StackPanel Margin="10">
+                        <TextBlock Text="Authors" FontSize="18" FontWeight="Bold" TextAlignment="Center"/>
+                        <TextBlock x:Name="TotalAuthorsTextBlock" FontSize="16" TextAlignment="Center"/>
+                    </StackPanel>
+                </Border>
+
+                <!-- Second Row with two columns -->
+                <Border BorderBrush="Black" BorderThickness="1" CornerRadius="5" Margin="10,10,10,10" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3">
+                    <StackPanel Margin="10">
+                        <TextBlock Text="Total Revenue" FontSize="18" FontWeight="Bold" TextAlignment="Center"/>
+                        <TextBlock x:Name="TotalRevenueTextBlock" FontSize="16" TextAlignment="Center"/>
+                    </StackPanel>
+                </Border>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</Window>

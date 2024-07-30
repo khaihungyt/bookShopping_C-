@@ -1,0 +1,43 @@
+﻿<Window x:Class="PRN212_Assignment.AddBookWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Add Book" Height="700" Width="800">
+    <Grid>
+        <StackPanel Margin="10">
+            <TextBlock Text="Book Name" />
+            <TextBox Name="txtBookName" />
+
+            <TextBlock Text="Genre" />
+            <ComboBox Name="cmbGenre" DisplayMemberPath="GenreName" SelectedValuePath="GenreId" />
+
+            <TextBlock Text="Author" />
+            <ComboBox Name="cmbAuthor" DisplayMemberPath="AuthorName" SelectedValuePath="AuthorId" />
+
+            <TextBlock Text="Quantity" />
+            <TextBox Name="txtQuantity" />
+
+            <TextBlock Text="Price Input" />
+            <TextBox Name="txtPriceInput" />
+
+            <TextBlock Text="Price Output" />
+            <TextBox Name="txtPriceOutput" />
+
+            <TextBlock Text="Image 1" />
+            <TextBox Name="txtImage1" />
+
+            <TextBlock Text="Image 2" />
+            <TextBox Name="txtImage2" />
+
+            <TextBlock Text="Image 3" />
+            <TextBox Name="txtImage3" />
+
+            <TextBlock Text="Image 4" />
+            <TextBox Name="txtImage4" />
+
+            <TextBlock Text="Detail Book" />
+            <TextBox Name="txtDetailbook" />
+
+            <Button Content="Add New Book" Click="AddNewBookButton_Click" Margin="10" Width="145" Height="30" HorizontalAlignment="Right" />
+        </StackPanel>
+    </Grid>
+</Window>

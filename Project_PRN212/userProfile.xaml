@@ -1,0 +1,54 @@
+﻿<Window x:Class="PRN212_Assignment.userProfile"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="User Profile" Height="500
+" Width="800">
+    <Grid Background="#f8f5f5">
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0">
+            <StackPanel Width="167" Margin="0,0,15,0">
+                <Button x:Name="InformationButton" Content="Information" Margin="0,10,0,10" Click="Button_Click_1"/>
+                <Button x:Name="MyOrdersButton" Content="My Orders" Margin="0,10,0,10" Click="MyOrders_Click"/>
+                <Button x:Name="ChangePassButton" Content="Change Password" Margin="0,10,0,10" Click="ChangePass_Click"/>
+                <Button x:Name="BackToHomepageButton" Content="Back to Homepage" Margin="0,10,0,10" Click="BackToHomepage_Click"/>
+                <Button x:Name="LogOutButton" Content="Log Out" Margin="0,10,0,10" Background="#428bca" Foreground="White" Click="LogOut_Click"/>
+            </StackPanel>
+            <Border Background="White" Padding="20" Width="608" Height="449">
+                <StackPanel Margin="0,0,0,0">
+                    <Border Width="100" Height="100" Background="Linen" Margin="0,0,0,10">
+                        <Image Source="/Images/user_icon.png" />
+                    </Border>
+
+                    <StackPanel Orientation="Vertical" Margin="10,0,0,0" Width="555">
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                            <TextBlock Text="Username: " FontWeight="Bold" Height="21" VerticalAlignment="Center" FontSize="16"/>
+                            <TextBlock Width="500" x:Name="UsernameTextBlock" Height="25" Margin="0,10,0,0"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                            <TextBlock Text="Email: " FontWeight="Bold" Width="83" FontSize="16"/>
+                            <TextBlock Width="500" x:Name="EmailTextBlock" Height="25" Margin="0,5,0,0" Text=""/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                            <TextBlock Text="Role: " FontWeight="Bold" Width="81" FontSize="16"/>
+                            <TextBlock x:Name="RoleTextBlock" Height="25" Width="104" Margin="0,3,0,0" Text=""/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                            <TextBlock Text="First Name: " FontWeight="Bold" FontSize="16"/>
+                            <TextBox Width="200" x:Name="FirstNameTextBox" Margin="0,0,20,0"/>
+
+                            <TextBlock Text="Last Name: " FontWeight="Bold" Margin="10,0,0,0" FontSize="16"/>
+                            <TextBox Width="142" x:Name="LastNameTextBox" Margin="20,0,0,0"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                            <TextBlock Text="Address: " FontWeight="Bold" Width="88" FontSize="16"/>
+                            <TextBox Width="474" x:Name="AddressTextBox"/>
+                        </StackPanel>
+                        <Button Content="Update" Width="96" Background="#428bca" Foreground="White" Height="34" Click="Button_Click" Margin="0,20,0,0"/>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+        </StackPanel>
+    </Grid>
+</Window>

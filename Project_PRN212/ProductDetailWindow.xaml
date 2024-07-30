@@ -1,0 +1,24 @@
+﻿<Window x:Class="PRN212_Assignment.ProductDetailWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Product Detail" Height="300" Width="400">
+    <Grid Margin="10">
+        <StackPanel>
+            <TextBlock Text="Product Details" FontSize="20" FontWeight="Bold" Margin="0,0,0,10"/>
+            <TextBlock Text="ID:" FontWeight="Bold"/>
+            <TextBlock Name="tbBookId" Margin="0,0,0,10"/>
+            <TextBlock Text="Name:" FontWeight="Bold"/>
+            <TextBlock Name="tbBookName" Margin="0,0,0,10"/>
+            <TextBlock Text="Author:" FontWeight="Bold"/>
+            <TextBlock Name="tbAuthorName" Margin="0,0,0,10"/>
+            <TextBlock Text="Genre:" FontWeight="Bold"/>
+            <TextBlock Name="tbGenreName" Margin="0,0,0,10"/>
+            <TextBlock Text="Quantity:" FontWeight="Bold"/>
+            <TextBlock Name="tbBookQuantity" Margin="0,0,0,10"/>
+            <TextBlock Text="Price Input:" FontWeight="Bold"/>
+            <TextBlock Name="tbBookPriceIn" Margin="0,0,0,10"/>
+            <TextBlock Text="Price Output:" FontWeight="Bold"/>
+            <TextBlock Name="tbBookPriceOut" Margin="0,0,0,10"/>
+        </StackPanel>
+    </Grid>
+</Window>

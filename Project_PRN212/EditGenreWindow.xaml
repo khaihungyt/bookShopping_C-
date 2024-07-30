@@ -1,0 +1,19 @@
+﻿<Window x:Class="PRN212_Assignment.EditGenreWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Edit Genre" Height="200" Width="400">
+    <Grid Margin="10">
+      
+        <StackPanel Margin="20">
+            <TextBlock Text="Edit Genre Details" FontSize="16" FontWeight="Bold" Margin="0 0 0 10"/>
+            <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
+                <TextBlock Text="Genre Name:" VerticalAlignment="Center" Width="80"/>
+                <TextBox x:Name="txtEditGenreName" Width="200"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button Content="Save" Width="80" Margin="0 10 10 0" Click="SaveButton_Click"/>
+                <Button Content="Cancel" Width="80" Margin="0 10 0 0" Click="CancelButton_Click"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

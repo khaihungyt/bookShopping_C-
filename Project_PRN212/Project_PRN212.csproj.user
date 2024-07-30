@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <Compile Update="BookList.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="DashboardManage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UserAuthorization.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="BookList.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="DashboardManage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserAuthorization.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>
